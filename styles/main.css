@@ -1,0 +1,49 @@
+#animated_div {
+    width: 150px;
+    height: 75px;
+    background-color: #92B901;
+    padding: 0px;
+    border-radius: 5px;
+    
+    position: relative;    
+    top: 100px;
+       
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+   	line-height: 70px;
+    
+    animation-name: animated_div;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animated_div {
+    /* at start */
+    0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    /* by 25% in (i.e. by 1s in), have rotated clockwise 20 degrees */
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+    /* by 50% in (i.e. by 2s in), be back horizontal and moved right 500px */ 
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+    /* by 75% in (i.e. by 3s in), have finished changing colour but be in same position */
+    75% {
+        transform: rotate(0deg);
+        left: 500px;
+        background-color: #1ec7e6;
+    }
+    /* by 100% in (i.e. by 4s in), have rotated anticlockwise 360 degrees and moved left 500px */
+    100% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+}
